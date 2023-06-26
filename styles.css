@@ -8,7 +8,7 @@ body div {
 
 .container {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -20,6 +20,15 @@ p {
 
 .head {
     font-size: 37px;
+    margin-left: 15%;
+    padding-top: 10% !important;
+    position: absolute;
+    z-index: 1;
+}
+
+.title {
+    text-align: left;
+    font-size: 64px;
 }
 
 .full-pic img {
@@ -27,8 +36,18 @@ p {
     height: 50%;
 }
 
+.main-content {
+    padding-top: 0 !important;
+}
+
+.backdrop {
+    opacity: 50%;
+    padding-top: 0 !important;
+}
+
 .row {
     padding-top: 0 !important;
+    align-items: center;
 }
 
 .row img {
@@ -36,8 +55,17 @@ p {
     height: 100%;
 }
 
+.location {
+    display: flex;
+    position: absolute;
+    right: 25px;
+    color: white;
+    padding-top: 4% !important;
+}
+
 .half-height img {
     height: 300px;
+    object-fit: cover;
 }
 
 .brand-msg h3 {
@@ -61,10 +89,57 @@ h6 {
 
 .shop-now {
     margin-top: 7%;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 125px;
+    background: white;
+    box-shadow: 0px 0px 13px 2px #888;
+}
+
+.popup {
+    display: none;
+    padding-top: 0 !important;
+}
+
+.popup-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 300px;
+    margin-top: -150px;
+    /* Negative half of height. */
+    margin-left: -225px;
+    /* Negative half of width. */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 13px 2px #888;
+    padding: 0 30px !important;
+}
+
+.blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: ' ';
+    background: rgba(0, 0, 0, .5);
+}
+
+.show {
+    display: block;
 }
 
 .footer {
-    margin-top: 3%;
     padding-top: 0 !important;
     height: 75px;
     background-color: lightgray;
